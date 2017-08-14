@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="HTt-WL-X4s">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--首页-->
+        <scene sceneID="HY5-XM-AMF">
+            <objects>
+                <viewController id="i54-n7-3Y5" customClass="HomeViewController" customModule="WeiBo_lu" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="CE1-6H-QV4"/>
+                        <viewControllerLayoutGuide type="bottom" id="CNn-fh-e6n"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="YSN-Ed-rod">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="obD-ig-3Wn">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="i54-n7-3Y5" id="cec-Cy-THe"/>
+                                    <outlet property="delegate" destination="i54-n7-3Y5" id="blX-6w-0w1"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="obD-ig-3Wn" firstAttribute="top" secondItem="CE1-6H-QV4" secondAttribute="bottom" constant="-64" id="9Gl-dB-8Tl"/>
+                            <constraint firstItem="CNn-fh-e6n" firstAttribute="top" secondItem="obD-ig-3Wn" secondAttribute="bottom" id="Egd-kh-2H6"/>
+                            <constraint firstItem="obD-ig-3Wn" firstAttribute="leading" secondItem="YSN-Ed-rod" secondAttribute="leading" id="Mfe-7R-5mf"/>
+                            <constraint firstAttribute="trailing" secondItem="obD-ig-3Wn" secondAttribute="trailing" id="hws-qS-IWn"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="首页" id="FSu-he-TNZ"/>
+                    <connections>
+                        <outlet property="Mytableview" destination="obD-ig-3Wn" id="F5y-fQ-sqa"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ebx-2e-sw3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1512.8" y="-824.43778110944538"/>
+        </scene>
+        <!--首页-->
+        <scene sceneID="T5q-bw-FQn">
+            <objects>
+                <navigationController id="HTt-WL-X4s" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="首页" image="tabbar_home" id="hsc-TF-Q4Z"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="rLN-f3-tCB">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="i54-n7-3Y5" kind="relationship" relationship="rootViewController" id="hHE-XE-YYl"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cW6-Up-Wha" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="514" y="-825"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="tabbar_home" width="30" height="30"/>
+    </resources>
+</document>
